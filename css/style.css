@@ -8,6 +8,10 @@ p span {
   color: red;
 }
 
+p a {
+  color: blue;
+}
+
 section {
   display: flex;
   width:100%;

@@ -7,7 +7,7 @@ How to Use
 ---
 Point your web browser to [https://octopus-arts.github.io/googlooper](https://octopus-arts.github.io/googlooper).
 
-To load a file into googlooper, one has to first get a shareable link to the file. On Google Drive, you can right-click on the file you want to load and see a contextual menu appear. Within this contextual menu, select ***Share***. A dialog will appear, and then you can click on ***Copy Link*** in the lower left corner. Paste this link into a text document. Then you want to copy the file id from the link and paste it into googlooper. For example, in the following link:
+To load a file into googlooper, you first need to get a shareable link to the file. On Google Drive, you can right-click on the file you want to load and see a contextual menu appear. Within this contextual menu, select ***Share***. A dialog will appear, and then you can click on ***Copy Link*** in the lower left corner. Paste this link into a text document. Then you want to copy the file id from the link and paste it into googlooper. For example, in the following link:
 
 ```
 https://drive.google.com/file/d/1et2nM9a1eq5WgRbomOMw7S_z6L8_9kcm/view?usp=sharing
