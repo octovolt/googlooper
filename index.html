@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Googlooper</title>
+  <meta name="description" content="a tool to loop audio or video">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Googlooper">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://octopus-arts.github.io/Googlooper">
+  <meta property="og:description" content="A tool to loop audio or video">
+  <!-- <meta property="og:image" content=""> -->
+
+  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <!-- <link rel="apple-touch-icon" href="icon.png"> -->
+  <!-- Place favicon.ico in the root directory -->
+
+  <link type="text/css" rel="stylesheet" href="css/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <style>
+    @media screen and (min-width: 720px) {
+      video, .content {
+        max-width: 45rem;
+      }
+      #file-id {
+        width: 30rem;
+      }
+      #start-time, #end-time, #rate {
+        width: 4rem;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 719px) {
+      video, .content {
+        max-width: 30rem !important;
+      }
+      #file-id {
+        max-width: 20rem !important;
+      }
+    }
+
+    @media screen and (min-width: 384px) and (max-width: 479px) {
+      video, .content {
+        max-width: 24rem !important;
+      }
+      #file-id {
+        max-width: 16rem !important;
+      }
+      label, .controls-right-side {
+        display: block;
+      }
+      button span {
+        display:none;
+      }
+    }
+
+    @media screen and (min-width: 288px) and (max-width: 383px) {
+      video, .content {
+        max-width: 18rem !important;
+      }
+      #file-id {
+        max-width: 9rem !important;
+      }
+      label, .controls-right-side {
+        display: block;
+      }
+      button span {
+        display:none;
+      }
+    }
+
+    @media screen and (max-width: 287px) {
+      video, .content {
+        max-width: 12rem !important;
+      }
+      #file-id {
+        max-width: 6rem !important;
+      }
+      label, .controls-right-side {
+        display: block;
+      }
+      button span {
+        display:none;
+      }
+      #start-time, #end-time, #rate {
+        width: 2rem;
+      }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+       /* CSS specific to iOS devices */
+       .text {
+          overflow-wrap: break-word;
+       }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div class="content">
+      <h1>googlooper</h1>
+      
+      <video id="html5-video" autoplay loop controls playsinline></video>
+
+      <div class="text">
+        <p>in this example, <wbr>the red text is the file id:</p>
+        <p>https://drive.google.com/file/d/<wbr><span>1nxZlnR3GJeaQaVtacnRidZJyVW9btRw7</span><wbr>/view?usp=share_link</p>
+      </div>
+      
+      <div class="controls" id="playback-controls">
+        <label>play:</label>
+        <div class="controls-right-side">
+          <button type="button" id="rewind"><<<span> 5 sec</span></button>
+          <button type="button" id="play">play</button>
+          <button type="button" id="loop">loop</button>
+          <button type="button" id="pause">pause</button>
+          <button type="button" id="fast-forward"><span>5 sec </span>>></button>
+        </div>
+      </div>
+
+      <div class="controls" id="file-controls">
+        <label>file id:</label>
+        <div class="controls-right-side">
+          <input 
+            type="textfield" 
+            id="file-id" 
+            value="1nxZlnR3GJeaQaVtacnRidZJyVW9btRw7"
+          /> 
+          <button type="button" id="load-file">load</button>
+        </div>
+      </div>
+
+      <div class="controls" id="start-time-controls">
+        <label>start:</label>
+        <div class="controls-right-side">
+          <input type="textfield" id="start-time" value="0" />
+          <button type="button" id="set-start">set</button>
+          <button type="button" id="set-start-to-current-time"><span>set to </span>current time</button>
+        </div>
+      </div>
+
+      <div class="controls" id="end-time-controls">
+        <label>end:</label>
+        <div class="controls-right-side">
+          <input type="textfield" id="end-time" value="10" />
+          <button type="button" id="set-end">set</button>
+          <button type="button" id="set-end-to-current-time"><span>set to </span>current time</button>
+        </div>
+      </div>
+
+      <div class="controls" id="rate-controls">
+        <label>rate:</label>
+        <div class="controls-right-side">
+          <input type="textfield" id="rate" value="1.0" />
+          <button type="button" id="change-rate">change</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- S C R I P T S -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body>
+
+</html>

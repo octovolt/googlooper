@@ -1,0 +1,72 @@
+body {
+  background-color: #000;
+  font-family: monospace;
+  color: lime;
+}
+
+p span {
+  color: red;
+}
+
+section {
+  display: flex;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  display: none;
+  background-color: #000;
+}
+
+label {
+  display: inline-block;
+  width: 4rem;
+  padding-right: 1rem;
+}
+
+input {
+  background-color: #00300b;
+}
+
+button {
+  background-color: #000;
+  border-radius: 0.3rem;
+}
+
+input, button {
+  border: solid 0.1rem lime;
+  color: lime;
+}
+
+label, input, button {
+  margin-top: 1em;
+}
+
+button:active, .active {
+  background-color: lime;
+  color: #000;
+}
+
+button:disabled {
+  opacity:0.5;
+}
+
+button:disabled:active {
+  opacity: 1;
+  background-color: red;
+}
+
+.controls, .text {
+  padding-top: 1rem;
+  flex-direction: row;
+}
+
+.controls-right-side {
+  display: inline-block;
+}
+
+
+
+
