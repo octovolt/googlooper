@@ -5,7 +5,7 @@ This was originally developed to aid musicians like myself in learning and rehea
 
 How to Use
 ---
-Point your web browser to [https://octopus-arts.github.io/googlooper](https://octovolt.github.io/googlooper).
+Point your web browser to [https://octovolt.github.io/googlooper](https://octovolt.github.io/googlooper).
 
 To load a file into googlooper, you first need to get a shareable link to the file. On Google Drive, you can right-click on the file you want to load and see a contextual menu appear. Within this contextual menu, select ***Share***. A dialog will appear, and then you can click on ***Copy Link*** in the lower left corner. Paste this link into a text document. Then you want to copy the file id from the link and paste it into googlooper. For example, in the following link:
 
