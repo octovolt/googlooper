@@ -1,12 +1,10 @@
 # googlooper
-Audio and video looper for files stored on Google Drive
+Audio and video looper for files stored on Google Drive. See it live: [https://octovolt.github.io/googlooper](https://octovolt.github.io/googlooper).
 
 This was originally developed to aid musicians like myself in learning and rehearsing music. However, I am excited to use this tool to loop sections of both audio and video files as part of a creative process where I deconstruct and reprocess the original source material to create new artwork. I hope you find interesting ways to use it as well. Please enjoy!
 
 How to Use
 ---
-Point your web browser to [https://octovolt.github.io/googlooper](https://octovolt.github.io/googlooper).
-
 To load a file into googlooper, you first need to get a shareable link to the file. On Google Drive, you can right-click on the file you want to load and see a contextual menu appear. Within this contextual menu, select ***Share***. A dialog will appear, and then you can click on ***Copy Link*** in the lower left corner. Paste this link into a text document. Then you want to copy the file id from the link and paste it into googlooper. For example, in the following link:
 
 ```
